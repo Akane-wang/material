@@ -1,0 +1,82 @@
+# 常见考点
+
+- react的生命周期是如何，16以后的生命周期有三个没有在使用，为何，是哪三个
+  - 16的生命周期与15的生命周期有一定的异同点，16以后有三个生命周期是已经不建议使用了的，【不建议使用的理由】
+  - 分析生命周期分别是哪些
+  - 生命周期分别在哪些阶段被执行
+    - 挂载阶段
+    - 更新阶段
+    - 卸载阶段
+  - 如何在生命周期中做性能优化
+  - 函数组件和类组件
+- react的请求应该放在哪个生命周期中
+- setState是同步还是异步
+- react组件的通信如何实现
+  - 父子组件
+  - 子父组件
+  - 兄弟组件
+  - 跨层级通信
+  - 发布订阅模式
+  - 全局状态管理工具
+- react性能优化手段
+- react如何进行逻辑复用
+  - 高阶组件
+    - 属性代理
+    - 反向继承
+  - 渲染属性
+  - react-hooks
+- mixin,hoc,render-props,react-hooks的优劣如何
+  - mixin的缺陷
+  - hoc相比于mixin的优势
+  - hoc的缺陷
+  - render-props的优点
+  - render-props的缺陷
+  - react-hooks的优点
+  - react-hooks的缺陷
+- react，如何理解fiber
+  - 是什么
+  - 16之前使用的diff算法的劣势（递归【无法中断】 => 【时间切片】）
+  - 16之后重写fiber用于处理diff算法之前的劣势
+  - 如何实现
+- 对time-slice的理解（时间切片）
+- redux的工作流程
+  - 核心概念
+    - store
+    - state
+    - action
+    - reducer
+    - action-creator
+    - dispatch
+  - 工作流程
+- react-redux如何工作的
+  - provider
+  - connect
+
+- redux与mobx的区别
+  - 两者对比
+  - 场景辨析
+- redux如何进行异步操作
+- redux异步中间件之间的优劣
+  - redux-thunk的优点
+    - 体积小
+    - 使用简单
+  - redux-thunk的缺陷
+    - 样板代码多
+    - 耦合严重
+    - 功能孱弱
+  - redux-saga优点
+    - 异步解耦
+    - 异常处理
+    - 功能强大
+    - 灵活
+  - redux-sage的缺陷
+    - 额外的学习成本
+    - 体积庞大
+    - 功能过剩
+    - ts支持不友好
+  - redux-observable优点
+    - 功能最强
+    - 背靠rxjs
+  - redux-observable缺陷
+    - 学习成本奇高
+    - 社区一般
