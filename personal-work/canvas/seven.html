@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" style="border: 1px solid red;margin: auto;">该浏览器不支持canvas</canvas>
+    <script>
+        var content = [
+            {p:[{x:70,y:0},{x:70,y:75},{x:140,y:75},{x:140,y:0}],color:'#FFFF19'},
+            {p:[{x:0,y:125},{x:100,y:125},{x:150,y:75},{x:50,y:75}],color:'#19CDFE'},
+            {p:[{x:100,y:125},{x:300,y:125},{x:200,y:25}],color:'#9AFD52'},
+            {p:[{x:50,y:225},{x:100,y:175},{x:50,y:125}],color:'#FF54FF'},
+            {p:[{x:50,y:125},{x:150,y:125},{x:100,y:175}],color:'#FF873B'},
+            {p:[{x:50,y:225},{x:150,y:125},{x:250,y:225}],color:'#FF56B9'},
+            {p:[{x:150,y:125},{x:250,y:125},{x:250,y:225}],color:'FE463C'},
+        ]
+        window.onload = function(){
+            var canvas= document.getElementById('canvas');
+            canvas.width = 1024;
+            canvas.height = 1000;
+            var ctx = canvas.getContext('2d');
+            for(var i = 0; i < content.length; i++) {
+                draw(content[i],ctx);
+            }
+
+            function draw(piece, ctx) {
+                ctx.beginPath();
+                ctx.moveTo(piece.p[0].x,piece.p[0].y);
+                for(var i = 1; i < piece.p.length; i++) {
+                    ctx.lineTo(piece.p[i].x,piece.p[i].y);
+                }
+                ctx.fillStyle = piece.color;
+                ctx.closePath();
+                ctx.fill();
+            }
+        }
+    </script>
+</body>
+</html>

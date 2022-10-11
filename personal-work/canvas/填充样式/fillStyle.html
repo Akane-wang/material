@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" style="border: 1px solid red"></canvas>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('canvas');
+            canvas.height = 768;
+            canvas.width = 1024;
+            var context = canvas.getContext('2d');
+
+            // var linearGrad = context.createLinearGradient(0,0,768,768);
+            var linearGrad = context.createLinearGradient(0,0,768,0);
+            var linearGrad = context.createLinearGradient(0,0,0,768);
+            linearGrad.addColorStop(0.0,'white');
+            linearGrad.addColorStop(0.25,'yellow');
+            linearGrad.addColorStop(0.5,'pink');
+            linearGrad.addColorStop(1.0,'orange');
+            context.fillStyle = linearGrad;
+            context.fillRect(0,0,768,768);
+        }
+    </script>
+</body>
+</html>

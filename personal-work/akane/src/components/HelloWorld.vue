@@ -1,0 +1,56 @@
+<template>
+  <div>
+    <table id="ttt">
+      <tr hidden>
+        <td>我是被隐藏的重要线索</td>
+      </tr>
+      <tr>
+        <td>我是一只小表格,yahe</td>
+        <td>咿呀咿呀呦</td>
+      </tr>
+      <tr>
+        <td>我是一颗小小的石头</td>
+        <td>深深的埋在泥土之中 </td>
+      </tr>
+    </table>
+    <a download="somedata.xls" href="#" onclick="return ExcellentExport.excel(this, 'datatable', 'Sheet Name Here');">Export to Excel</a>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  //  methods: {
+  //   excell(){
+  //     return ExcellentExport.excel(this, 'ttt', 'Sheet Name Here');
+  //   }
+  // }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+table, tr, td {
+                border: 1px black solid;
+          }
+</style>

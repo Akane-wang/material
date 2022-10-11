@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" style='border:1px solid salmon'>
+        不支持canvas显示此处
+    </canvas>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('canvas');
+            canvas.height = 800;
+            canvas.width = 1200;
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+                drawMoveTo(ctx);
+                drawNoMoveTo(ctx);
+            }
+        }
+        
+        function drawMoveTo(ctx) {
+            ctx.beginPath();
+            ctx.arc(170,170,50,0,Math.PI*2,true);
+            ctx.moveTo(170,170);
+            ctx.arc(170,170,30,0,Math.PI,false);
+            ctx.moveTo(145,155);
+            ctx.arc(145,155,5,0,Math.PI*2,true);
+            ctx.moveTo(195,155);
+            ctx.arc(195,155,5,0,Math.PI*2,true);
+            ctx.stroke();
+        }
+
+        function drawNoMoveTo(ctx) {
+            ctx.beginPath();
+            ctx.arc(70,70,50,0,Math.PI*2,true);
+            ctx.arc(70,70,30,0,Math.PI,false);
+            ctx.arc(45,55,5,0,Math.PI*2,true);
+            ctx.arc(95,55,5,0,Math.PI*2,true);
+            ctx.stroke();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" style="border: 1px solid red"></canvas>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('canvas');
+            canvas.height = 768;
+            canvas.width = 1024;
+            var context = canvas.getContext('2d');
+
+            context.lineWidth = 3;
+            context.fillStyle = 'black';
+            context.save();
+            context.translate(100,100);
+            context.fillRect(0,0,200,200);
+            context.restore();
+
+            context.fillStyle = '#EC719D';
+            context.fillRect(300,300,100,100);
+            
+            context.fillStyle = '#FDA800';
+            context.save();
+            context.translate(200,200);
+            context.fillRect(200,200,200,200);
+            context.restore();
+
+        }
+    </script>
+</body>
+</html>

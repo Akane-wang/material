@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制棋盘格</title>
+</head>
+<body>
+    <canvas id="canvas" style="border: 1px solid red"></canvas>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById('canvas');
+            canvas.width = 800;
+            canvas.height = 800;
+            var context = canvas.getContext('2d');
+            arcToTest(context,150,100,650,100,650,600,300);
+        }
+
+        function arcToTest(ctx,x0,y0,x1,y1,x2,y2,R) {
+            ctx.beginPath();
+            ctx.moveTo(x0,y0);
+            ctx.arcTo(x1,y1,x2,y2,R);
+            ctx.lineWidth = 6;
+            ctx.strokeStyle = 'red';
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(150,100);
+            ctx.lineTo(650,100);
+            ctx.lineTo(650,600);
+            ctx.lineWidth = '2';
+            ctx.strokeStyle = 'gray';
+            ctx.stroke();
+        }
+    </script>
+</body>
+</html>

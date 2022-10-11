@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" style='border:1px solid salmon'>
+        不支持canvas显示此处
+    </canvas>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('canvas');
+            canvas.height = 800;
+            canvas.width = 1200;
+            var context = canvas.getContext('2d');
+        }
+    </script>
+</body>
+</html>

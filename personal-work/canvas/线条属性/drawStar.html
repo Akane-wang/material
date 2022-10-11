@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" style="border: 1px solid red"></canvas>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('canvas');
+            canvas.height = 768;
+            canvas.width = 1024;
+            var context = canvas.getContext('2d');
+
+            context.lineWidth = 10;
+            context.lineJoin = 'miter';
+            context.miterLimit = 2;
+            drawStar(context,50,100,200,500,0);
+
+            context.miterLimit = 10;
+            drawStar(context,50,100,600,500,0);
+
+            // context.lineJoin = 'bevel';
+            // drawStar(context,50,100,400,500,40);
+
+            // context.lineJoin = 'round';
+            // drawStar(context,50,100,600,500,40);
+            
+
+         
+            function drawStar(cxt,r,R,x,y,rot) {
+                context.beginPath();
+            for(var i = 0; i < 5; i++) {
+                context.lineTo(Math.cos( (18+i*72-rot)/180 * Math.PI) * R + x,-Math.sin((18 + i * 72-rot)/180 * Math.PI) *R + y);
+
+                context.lineTo(Math.cos( (54+i*72-rot)/180 * Math.PI) * r + x,-Math.sin((54 + i * 72-rot)/180 * Math.PI) *r + y);
+            }
+            context.closePath();
+            context.stroke();
+            }
+        }
+    </script>
+</body>
+</html>

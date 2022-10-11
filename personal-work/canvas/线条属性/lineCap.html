@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('canvas');
+            canvas.height = 1024;
+            canvas.width = 768;
+            var context = canvas.getContext('2d');
+
+            context.lineWidth = 50;
+            context.beginPath();
+            context.strokeStyle = 'red';
+            context.lineCap = 'butt';
+            context.moveTo(100,100);
+            context.lineTo(400,100);
+            context.stroke();
+            context.closePath();
+
+            context.beginPath();
+            context.strokeStyle = 'yellow';
+            context.lineCap = 'round';
+            context.moveTo(100,200);
+            context.lineTo(400,200);
+            context.stroke();
+            context.closePath();
+
+            context.beginPath();
+            context.strokeStyle = 'blue';
+            context.lineCap = 'square';
+            context.moveTo(100,300);
+            context.lineTo(400,300);
+            context.stroke();
+            context.closePath();
+
+            context.beginPath();
+            context.lineWidth = 5;
+            context.strokeStyle = 'pink';
+            context.moveTo(100,50);
+            context.lineTo(100,400);
+            context.stroke();
+            context.closePath();
+
+            context.beginPath();
+            context.strokeStyle = 'pink';
+            context.moveTo(400,50);
+            context.lineTo(400,400);
+            context.stroke();
+            context.closePath();
+
+            
+        }
+    </script>
+</body>
+</html>

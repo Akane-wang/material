@@ -1,0 +1,66 @@
+# 继承
+
+- 继承如何传递
+
+  ![image-20211104121558768](C:\Users\BAICHUAN-64\AppData\Roaming\Typora\typora-user-images\image-20211104121558768.png)
+
+- 特定的属性能被继承
+  - 与文本相关的属性
+    - color
+    - font
+    - font-family
+    - font-size
+    - font-weight
+    - font-variant
+    - font-style
+    - line-height
+    - letter-spacing
+    - text-align
+    - text-indent
+    - text-transform
+    - white-space
+    - word-spacing
+  - 列表属性
+    - list-style
+    - list-style-type
+    - list-style-position
+    - list-style-image
+  - 表格的边框属性
+    - border-collapse
+    - border-spacing
+- 特殊值
+  - inherit  与 initial 可以复制给任意属性用于控制层叠
+  - 区别
+    - inherit： 继承其父级可继承的属性
+    - initial：将属性设置为该属性的默认值（每个属性都有其初始值）
+
+- 简写属性
+  - 用于同时给多个属性赋值
+  - 简写属性会默默覆盖其他样式
+    - 其省略的值会被隐式的设置为初始值（initial）
+  - 简写值的顺序
+    - 上右下左；没有设置时取对边的值
+    - 水平、垂直(笛卡尔网格（x,y）)
+      - background-position
+      - box-shadow
+      - text-shadow
+  - 简写属性的种类
+    - font指定的属性：
+      - font-style
+      - font-weight
+      - font-size,
+      - font-height,
+      - font-family
+    - background指定的属性: 
+      - background-color,
+      -  background-image,
+      -  background-size,
+      - background-repeat,
+      -  background-position, 
+      - background-origin, 
+      - background-chip, 
+      - background-attachment 
+    - border指定的属性：
+      - border-width: 上右下左
+      - border-style, 
+      - border-color

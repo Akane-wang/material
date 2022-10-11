@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" style="border: 1px solid red"></canvas>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById('canvas');
+            canvas.width = 800;
+            canvas.height = 800;
+            var context = canvas.getContext('2d');
+            fillMoon(context,2,400,400,300,0);
+            // context.arc(400,400,300,0.5*Math.PI,1.5*Math.PI,true);
+            // context.moveTo(400,100);
+            // context.arcTo(1200,400,400,700,(400-100)*dis(400,100,1200,400)/(1200-400));
+            // context.stroke();
+            // arcToTest(context,150,100,650,100,650,600,300);
+        }
+
+        function dis(x1,y1,x2,y2) {
+            return Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+        }
+
+        function fillMoon(cx,d,x,y,R,rot,/* optional */fillColor='#fb5'){
+            cx.save();
+            cx.translate(x,y);
+            cx.rotate(rot*Math.PI/180);
+            cx.scale(R,R);
+            pathMoon(cx,d);
+            cx.fillStyle = fillColor || '#fb5';
+            cx.fill();
+            cx.restore();
+        }
+
+        function pathMoon(cx,d) {
+            cx.beginPath();
+            cx.arc(0,0,1,0.5*Math.PI,1.5*Math.PI,true);
+            cx.moveTo(0,-1);
+            cx.arcTo(d,0,0,1,dis(0,-1,d,0)/d);
+        }
+    </script>
+</body>
+</html>
