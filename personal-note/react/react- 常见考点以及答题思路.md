@@ -8,6 +8,8 @@
     - 更新阶段
     - 卸载阶段
   - 如何在生命周期中做性能优化
+    - shouldComponentUpdate(): 默认为true（无条件更新） => 条件更新：在shouldComponentUpdate中写判断逻辑
+    - pureComponent()
   - 函数组件和类组件
 - react的请求应该放在哪个生命周期中
 - setState是同步还是异步

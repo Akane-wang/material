@@ -1,0 +1,149 @@
+<mxfile host="65bd71144e">
+    <diagram id="S7J9NHwuEgm22fnI7i42" name="第 1 页">
+        <mxGraphModel dx="1523" dy="617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="29" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="20" y="60" width="900" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="edgeStyle=none;html=1;fontColor=#ffffff;" edge="1" parent="29" source="6" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="render()" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="29">
+                    <mxGeometry x="-190" y="244" width="739" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="组件更新：由父组件触发" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#ffffff;strokeColor=#BD7000;" vertex="1" parent="29">
+                    <mxGeometry x="340" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="componentWillReceiveProps(nextProps)" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="29">
+                    <mxGeometry x="282.25" y="70" width="265.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#ffffff;" edge="1" parent="29" source="10" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="shouldComponentUpdate(nextProps, nextState): boolean" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="29">
+                    <mxGeometry x="254.07" y="130" width="321.87" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontColor=#ffffff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="29" source="11" target="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="416" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="" style="edgeStyle=none;html=1;fontColor=#ffffff;" edge="1" parent="29" source="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="415" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="componentWillUpdate()" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="29">
+                    <mxGeometry x="340.01" y="182" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontColor=#ffffff;" edge="1" parent="29" source="14" target="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="418" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="componentDidUpdate()" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="29">
+                    <mxGeometry x="340" y="330" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;fontColor=#ffffff;" edge="1" parent="29" source="6" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="edgeStyle=none;html=1;fontColor=#ffffff;" edge="1" parent="29" source="24" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="组件更新：由组件自身触发" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#ffffff;strokeColor=#BD7000;" vertex="1" parent="29">
+                    <mxGeometry x="610" y="128" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="把需要渲染的内容返回出来" style="text;html=1;strokeColor=#23445d;fillColor=#bac8d3;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="29">
+                    <mxGeometry x="580" y="248.5" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="父组件的更新触发，而非是props的变化触发" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1};fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="29">
+                    <mxGeometry x="490" y="44" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;fontColor=#ffffff;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" target="40" parent="29">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="549" y="86" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" value="" style="edgeStyle=none;html=1;fontColor=#ffffff;" edge="1" parent="29" source="42" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="不涉及真实dom操作的准备工作" style="ellipse;whiteSpace=wrap;html=1;align=center;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1};treeFolding=1;treeMoving=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="29">
+                    <mxGeometry x="192.5" y="165" width="130" height="47" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="edgeStyle=none;html=1;fontColor=#ffffff;" edge="1" parent="29" source="48" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="无条件render, 通过手动往shouldComponentUpdate中添加判定逻辑、使用PureComponent实现有条件render" style="text;html=1;strokeColor=#23445d;fillColor=#bac8d3;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="29">
+                    <mxGeometry x="600" y="182" width="300" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="getDerivedStateFromProps()" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="29">
+                    <mxGeometry x="20" y="74" width="180" height="37" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="380" y="530" width="150" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="组件卸载" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#ffffff;strokeColor=#BD7000;" vertex="1" parent="30">
+                    <mxGeometry width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="componentWillUnmount()" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="30">
+                    <mxGeometry y="85" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=none;html=1;fontColor=#ffffff;" edge="1" parent="30" source="26" target="27">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="edgeStyle=none;html=1;fontColor=#ffffff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="36">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="115" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="" style="edgeStyle=none;html=1;fontColor=#ffffff;" edge="1" parent="1" source="5" target="37">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="组件挂载：初始化渲染" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#ffffff;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="-160" y="60" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="constructor()" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="-160" y="146" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="componentWillMount()" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="-160" y="228" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="componentDidMount()" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="-160" y="390" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#ffffff;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="异步请求" style="text;html=1;strokeColor=#23445d;fillColor=#bac8d3;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-180" y="480" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#ffffff;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="数据初始化" style="text;html=1;strokeColor=#23445d;fillColor=#bac8d3;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-80" y="480" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="edgeStyle=none;html=1;fontColor=#ffffff;" edge="1" parent="1" source="42" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0.404;entryY=-0.016;entryDx=0;entryDy=0;fontColor=#ffffff;entryPerimeter=0;exitX=0.094;exitY=0.992;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="340" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="渲染结束，真实dom已经被挂载到页面" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#ffffff;" vertex="1" connectable="0" parent="20">
+                    <mxGeometry x="0.3928" y="-1" relative="1" as="geometry">
+                        <mxPoint y="-14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontColor=#ffffff;" edge="1" parent="1" source="4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-85" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
