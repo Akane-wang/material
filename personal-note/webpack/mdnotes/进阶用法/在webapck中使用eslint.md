@@ -21,9 +21,10 @@
         - 安装：
 
           -  `npm i eslint eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y babel-eslint eslint-loader eslint-config-airbnb -D` 注意最后一个插件是a十一y，不是aLLy
-
+          -  `eslint --fix`可以自动处理空格
+        
         - 新建文件`.eslintrc.js`
-
+        
           ```js
           module.exports = {
               "parser": "babel-eslint",
@@ -38,9 +39,9 @@
               }
           }
           ```
-
+        
         - 更改webpack.prod.js的配置
-
+        
           ```js
           module.exports = {
                module: {
@@ -56,5 +57,5 @@
                }
           }
           ```
-
+        
           
