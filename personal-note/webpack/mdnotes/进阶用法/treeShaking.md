@@ -1,4 +1,4 @@
-# 摇树优化
+# tree shaking(摇树优化)
 
 - 概念：一个模块可能有多个方法，只要其中的某个方法使用到了，则整个文件都会被打包到bundle里面去，tree shaking就是只把用到的方法打入bundle, 没用到的方法会在uglify阶段被擦除。
 - 使用：webpack默认支持，在.babelrc里设置modules: false即可
@@ -37,3 +37,12 @@
   - import的模块名只能是字符串常量
   - import binding是immutable的
 - 代码擦除：uglify阶段删除无用代码
+
+
+
+# 进阶：无用的css如何删除掉
+
+- PurifyCSS：遍历代码，识别已经用到的css class
+  - 使用purgecss-webpack-plugin和mini-css-extract-plugin配合使用
+  - *注*： purgecss-webpack-plugin似乎没法在webpack@5使用，因为会报错
+- uncss：html需要通过jsdom加载，所有的样式通过PostCSS解析，通过document.querySelector来识别在html文件里不存在的选择器
